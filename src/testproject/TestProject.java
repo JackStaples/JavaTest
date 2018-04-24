@@ -9,7 +9,7 @@ import testproject.APIs.DateTest;
 
 /**
  *
- * @author Jack
+ * @author Jack Staples
  */
 public class TestProject {
 
