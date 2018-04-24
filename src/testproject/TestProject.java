@@ -6,6 +6,7 @@
 package testproject;
 
 import testproject.APIs.DateTest;
+import testproject.APIs.StringTest;
 
 /**
  *
@@ -17,7 +18,14 @@ public class TestProject {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        dateTest();
+        //dateTest();
+        stringTest();
+    }
+    
+    private static void stringTest(){
+        StringTest stringTest = new StringTest();
+        //stringTest.stringify();
+        stringTest.stringBuildify();
     }
     
     private static void dateTest(){

@@ -28,4 +28,17 @@ public class StringTest {
         System.out.println("Lets remove it: " + concatTest.trim() +"See, its gone!");
     }
     
+    public void stringBuildify(){
+        StringBuilder test = new StringBuilder("I am a new StringBuilder.");
+        int len = test.length();
+        System.out.println(test);
+        test.append(" This will be appended.");
+        System.out.println(test);
+        test.insert(len, " This will be inserted.");
+        System.out.println(test);
+        test.delete(len, test.length());
+        System.out.println(test);
+        test.reverse();
+        System.out.println(test);
+    }
 }
