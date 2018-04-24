@@ -6,6 +6,7 @@
 package testproject;
 
 import testproject.APIs.DateTest;
+import testproject.APIs.EqualityTest;
 import testproject.APIs.StringTest;
 
 /**
@@ -19,7 +20,13 @@ public class TestProject {
      */
     public static void main(String[] args) {
         //dateTest();
-        stringTest();
+        //stringTest();
+        equalityTest();
+    }
+    
+    private static void equalityTest(){
+        EqualityTest equalityTest = new EqualityTest();
+        equalityTest.equalsTest();
     }
     
     private static void stringTest(){
