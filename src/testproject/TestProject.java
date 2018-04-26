@@ -16,6 +16,7 @@
  */
 package testproject;
 
+import testproject.APIs.ArrayListTest;
 import testproject.APIs.DateTest;
 import testproject.APIs.EqualityTest;
 import testproject.APIs.StringTest;
@@ -32,10 +33,18 @@ public class TestProject {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        dateTest();
-        stringTest();
-        equalityTest();
-        arrayTest();
+        //dateTest();
+        //stringTest();
+        //equalityTest();
+        //arrayTest();
+        arrayListTest();
+    }
+    
+    private static void arrayListTest(){
+        Integer[] integerArray = {4, 8, 15, 16, 23};
+        ArrayListTest integerArrayListTest = new ArrayListTest(integerArray);
+        integerArrayListTest.arrayListsTest();
+        
     }
     
     private static void arrayTest(){

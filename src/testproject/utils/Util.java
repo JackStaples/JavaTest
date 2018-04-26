@@ -16,6 +16,8 @@
  */
 package testproject.utils;
 
+import java.util.List;
+
 /**
  *
  * @author Jack Staples
@@ -30,4 +32,9 @@ public class Util {
         System.out.println(o);
     }
     
+    public static void say(List o){
+        for(Object i : o){
+            System.out.println(i);
+        }
+    }
 }
