@@ -16,6 +16,8 @@
  */
 package testproject.APIs;
 
+import static testproject.utils.Util.say;
+
 /**
  *
  * @author Jack Staples
@@ -27,19 +29,19 @@ public class EqualityTest extends EqualityTestParent{
         EqualityTestParent equalsParent = new EqualityTestParent();
         
         boolean testChild = equals instanceof EqualityTestParent;
-        System.out.println("Is a child part of the parent class? " + testChild);
+        say("Is a child part of the parent class? " + testChild);
         
         boolean testParent = equalsParent instanceof EqualityTest;
-        System.out.println("Is a child part of the parent class? " + testParent);
+        say("Is a child part of the parent class? " + testParent);
         
         boolean wrong = (equals == equalsParent);
-        System.out.println("Do they == each other? " + wrong);
+        say("Do they == each other? " + wrong);
         
         boolean right = equals.equals(equalsParent);
-        System.out.println("Do they .equals() each other since we overrode? " + right);
+        say("Do they .equals() each other since we overrode? " + right);
         
         boolean itself = equals == equals;
-        System.out.println("Does it equal itself? " + itself);
+        say("Does it equal itself? " + itself);
         
     }
     
@@ -50,6 +52,12 @@ class EqualityTestParent {
     @Override
     public boolean equals(Object o){
         return o instanceof EqualityTestParent;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        return hash;
     }
     
 }

@@ -16,6 +16,8 @@
  */
 package testproject.APIs;
 
+import static testproject.utils.Util.say;
+
 /**
  *
  * @author Jack
@@ -26,7 +28,7 @@ public class StringTest {
     
     public void stringify(){
         String test = "This is a string. It is immutable";
-        System.out.println("Hello, this is what test says: "+ test 
+        say("Hello, this is what test says: "+ test 
         + "\nImportant things to now about test.\nIt is " + test.length() + " characters long."
         + "\nIts ninth character is an " + test.charAt(8) 
         +".\nThe first time a s shows up is at index " + test.indexOf('s')
@@ -35,21 +37,21 @@ public class StringTest {
         +".\nDoes it start with the word banana? " + test.startsWith("banana")
         +".\nDoes it contain the word string? " + test.contains("string"));
         String concatTest = test + " This won't show in test, but will in concatTest                 ";
-        System.out.println("test: "  + test + "\nconcatTest: " + concatTest + "Wow thats alot of whitespace!");
-        System.out.println("Lets remove it: " + concatTest.trim() +"See, its gone!");
+        say("test: "  + test + "\nconcatTest: " + concatTest + "Wow thats alot of whitespace!");
+        say("Lets remove it: " + concatTest.trim() +"See, its gone!");
     }
     
     public void stringBuildify(){
         StringBuilder test = new StringBuilder("I am a new StringBuilder.");
         int len = test.length();
-        System.out.println(test);
+        say(test);
         test.append(" This will be appended.");
-        System.out.println(test);
+        say(test);
         test.insert(len, " This will be inserted.");
-        System.out.println(test);
+        say(test);
         test.delete(len, test.length());
-        System.out.println(test);
+        say(test);
         test.reverse();
-        System.out.println(test);
+        say(test);
     }
 }

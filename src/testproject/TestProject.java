@@ -19,6 +19,8 @@ package testproject;
 import testproject.APIs.DateTest;
 import testproject.APIs.EqualityTest;
 import testproject.APIs.StringTest;
+import testproject.APIs.ArrayTest;
+import static testproject.utils.Util.say;
 
 /**
  *
@@ -30,9 +32,15 @@ public class TestProject {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //dateTest();
-        //stringTest();
+        dateTest();
+        stringTest();
         equalityTest();
+        arrayTest();
+    }
+    
+    private static void arrayTest(){
+        ArrayTest arrayTest = new ArrayTest();
+        arrayTest.arraysTest();
     }
     
     private static void equalityTest(){
@@ -48,6 +56,6 @@ public class TestProject {
     
     private static void dateTest(){
         DateTest dateTest = DateTest.getDateTestObject();
-        System.out.println(dateTest);
+        say(dateTest);
     }
 }
