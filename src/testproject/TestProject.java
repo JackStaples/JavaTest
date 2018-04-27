@@ -21,6 +21,7 @@ import testproject.APIs.DateTest;
 import testproject.APIs.EqualityTest;
 import testproject.APIs.StringTest;
 import testproject.APIs.ArrayTest;
+import testproject.operators.OperatorTest;
 import static testproject.utils.Util.say;
 
 /**
@@ -37,7 +38,13 @@ public class TestProject {
         //stringTest();
         //equalityTest();
         //arrayTest();
-        arrayListTest();
+        //arrayListTest();
+        operatorTest();
+    }
+    
+    private static void operatorTest(){
+        OperatorTest operatorTest = new OperatorTest();
+        operatorTest.smoothOperator();
     }
     
     private static void arrayListTest(){
