@@ -22,6 +22,7 @@ import testproject.APIs.EqualityTest;
 import testproject.APIs.StringTest;
 import testproject.APIs.ArrayTest;
 import testproject.methods.ConstructorsTest;
+import testproject.methods.ImmutableTest;
 import testproject.operators.OperatorTest;
 import static testproject.utils.Util.say;
 
@@ -41,7 +42,16 @@ public class TestProject {
         //arrayTest();
         //arrayListTest();
         //operatorTest();
-        constructorTest();
+        //constructorTest();
+        immutableTest();
+    }
+    
+    private static void immutableTest(){
+        ImmutableTest immutableTest = new ImmutableTest("Howdy!",
+                "Hey!", "Goodbye!");
+        immutableTest.sayWave();
+        immutableTest = null;
+        System.gc(); // if it runs, the finalize will be called
     }
     
     private static void constructorTest(){
