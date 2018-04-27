@@ -21,6 +21,7 @@ import testproject.APIs.DateTest;
 import testproject.APIs.EqualityTest;
 import testproject.APIs.StringTest;
 import testproject.APIs.ArrayTest;
+import testproject.methods.ConstructorsTest;
 import testproject.operators.OperatorTest;
 import static testproject.utils.Util.say;
 
@@ -39,7 +40,15 @@ public class TestProject {
         //equalityTest();
         //arrayTest();
         //arrayListTest();
-        operatorTest();
+        //operatorTest();
+        constructorTest();
+    }
+    
+    private static void constructorTest(){
+        int i = 3;
+        ConstructorsTest constructorTest = new ConstructorsTest(3, 
+                "Banana", "Apple");
+        System.gc(); // suggest to the system to run garbage collection
     }
     
     private static void operatorTest(){
