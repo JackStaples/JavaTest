@@ -32,6 +32,12 @@ public class Util {
         System.out.println(o);
     }
     
+    public static void say(Object... o){
+        for (Object obj : o){
+            say(obj);
+        }
+    }
+    
     public static void say(List o){
         for(Object i : o){
             System.out.println(i);

@@ -21,6 +21,7 @@ import testproject.APIs.DateTest;
 import testproject.APIs.EqualityTest;
 import testproject.APIs.StringTest;
 import testproject.APIs.ArrayTest;
+import testproject.classdesign.AbstractTest;
 import testproject.methods.ConstructorsTest;
 import testproject.methods.ImmutableTest;
 import testproject.operators.OperatorTest;
@@ -43,7 +44,13 @@ public class TestProject {
         //arrayListTest();
         //operatorTest();
         //constructorTest();
-        immutableTest();
+        //immutableTest();
+        abstractTest();
+    }
+    
+    private static void abstractTest(){
+        AbstractTest abstractTest = new AbstractTest();
+        abstractTest.abstractTest();
     }
     
     private static void immutableTest(){
